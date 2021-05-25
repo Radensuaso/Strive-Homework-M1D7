@@ -151,7 +151,9 @@
       </tr>
     </table>
     <footer>
-      Radensuaso Shop. Address: Rua do Cerro 8101-050 <br />
+      Radensuaso Shop.
+      <address>Rua do Cerro 8101-050</address>
+      <br />
       <textarea name="" id="" cols="100" rows="10"></textarea>
     </footer>
     <script>
@@ -162,8 +164,13 @@
         (document.getElementsByTagName("body")[0].style.backgroundColor =
           "AntiqueWhite")
 
+      const changeAddressToFake = () =>
+        (document.getElementsByTagName("address")[0].innerText =
+          "The moon. This is not a fake address at all.")
+
       changeH1Text()
       changeBackgroundColor()
+      changeAddressToFake()
     </script>
   </body>
 </html>
