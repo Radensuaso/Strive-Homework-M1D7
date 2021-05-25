@@ -157,20 +157,34 @@
       <textarea name="" id="" cols="100" rows="10"></textarea>
     </footer>
     <script>
+      // Ex 7
       const changeH1Text = () =>
         (document.getElementsByTagName("h1")[0].innerText = "I've changed!")
 
+      //Ex8
       const changeBackgroundColor = () =>
         (document.getElementsByTagName("body")[0].style.backgroundColor =
           "AntiqueWhite")
 
+      //Ex9
       const changeAddressToFake = () =>
         (document.getElementsByTagName("address")[0].innerText =
           "The moon. This is not a fake address at all.")
 
+      //Ex10
+      const addClassToAllLinks = () => {
+        const listOfLinks = document.getElementsByTagName("a")
+        for (const a of listOfLinks) {
+          a.classList.add("links")
+        }
+      }
+
+      //Ex11
+
       changeH1Text()
       changeBackgroundColor()
       changeAddressToFake()
+      addClassToAllLinks()
     </script>
   </body>
 </html>
