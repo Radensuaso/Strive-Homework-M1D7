@@ -43,7 +43,7 @@
           Qualcomm(R) Snapdragon(TM) 888 for fast and powerful performance and
           5G Connectivity | Experience burdenless like never before
         </td>
-        <td>£629.00</td>
+        <td class="price">£629.00</td>
       </tr>
       <tr>
         <td><img src="assets/pixel 4a.jpg" /></td>
@@ -78,7 +78,7 @@
           the emergency services and can even detect if you’ve been in an
           accident
         </td>
-        <td>£344.99</td>
+        <td class="price">£344.99</td>
       </tr>
       <tr>
         <td>
@@ -119,7 +119,7 @@
           under third-party laboratory conditions. Rated (minimum) capacity is
           4,855 mAh. ³ MicroSD card sold separately.)
         </td>
-        <td>£1,052.96</td>
+        <td class="price">£1,052.96</td>
       </tr>
       <tr>
         <td><img src="assets/Moto G10.jpg" /></td>
@@ -155,7 +155,7 @@
           faster wireless charging iOS with redesigned widgets on the Home
           screen, all-new App Library, App Clips and more
         </td>
-        <td>£699.00</td>
+        <td class="price">£699.00</td>
       </tr>
     </table>
     <footer>
@@ -197,6 +197,15 @@
       }
 
       //Ex12
+      const changeToRandomColor = () => {
+        const listOfPrices = document.getElementsByClassName("price")
+        for (let price of listOfPrices) {
+          const randomColor =
+            "#" +
+            (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6)
+          price.style.color = randomColor
+        }
+      }
     </script>
   </body>
 </html>
