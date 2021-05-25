@@ -14,6 +14,14 @@
         border: 1px solid;
         height: 300px;
       }
+
+      .links {
+        color: orange;
+      }
+
+      .hideAndSeek {
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -181,10 +189,14 @@
 
       //Ex11
 
-      changeH1Text()
-      changeBackgroundColor()
-      changeAddressToFake()
-      addClassToAllLinks()
+      const toggleHideAndSeek = () => {
+        const listOfImages = document.getElementsByTagName("img")
+        for (const img of listOfImages) {
+          img.classList.toggle("hideAndSeek")
+        }
+      }
+
+      //Ex12
     </script>
   </body>
 </html>
