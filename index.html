@@ -20,7 +20,7 @@
       }
 
       .hideAndSeek {
-        display: none;
+        visibility: hidden;
       }
     </style>
   </head>
@@ -134,7 +134,7 @@
           using a 48 MP1 camera system? Or explore longer with more than two
           days of battery life2? With moto g10, you got it.
         </td>
-        <td>£128.99</td>
+        <td class="price">£128.99</td>
       </tr>
       <tr>
         <td><img src="assets/Apple iPhone 12.jpg" /></td>
@@ -197,13 +197,17 @@
       }
 
       //Ex12
+      const getRandomColor = () => {
+        const red = Math.floor(Math.random() * 256)
+        const green = Math.floor(Math.random() * 256)
+        const blue = Math.floor(Math.random() * 256)
+        return `rgb(${red}, ${green}, ${blue})`
+      }
+
       const changeToRandomColor = () => {
         const listOfPrices = document.getElementsByClassName("price")
         for (let price of listOfPrices) {
-          const randomColor =
-            "#" +
-            (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6)
-          price.style.color = randomColor
+          price.style.color = getRandomColor()
         }
       }
     </script>
